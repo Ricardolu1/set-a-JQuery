@@ -5,24 +5,21 @@ function getSiblings(node) {
     length: 0
   }
   for (let i = 0; i < allChildren.length; i++) {
-    if (allChildren[i] !== item3) {
+    if (allChildren[i] !== node) {
       array[array.length] = allChildren[i]
       array.length += 1
     }
   }
   return array
 }
-//添加class
 
-function addClass(node,classes) {
+//添加class
+function addClass(node, classes) {
   for (let key in classes) {
     var value = classes[key]
-    if (value) {
-      node.classList.add(key)
-    } else {
-      node.classList.remove(key)
-    }
+    var methodName = value ? "add" : "remove"
+    node.classList[methodName](key)
   }
 }
 
-addClass(item2,{a:true,k:true})
+addClass(item2, { a: true, k: true })

@@ -22,4 +22,20 @@ function addClass(node, classes) {
   }
 }
 
-addClass(item2, { a: true, k: true })
+// addClass(item2, { a: true, k: true })
+
+Node.prototype.getSiblings=function () {
+  var allChildren = this.parentNode.children
+  var array = {
+    length: 0
+  }
+  for (let i = 0; i < allChildren.length; i++) {
+    if (allChildren[i] !== this) {
+      array[array.length] = allChildren[i]
+      array.length += 1
+    }
+  }
+  return array
+}
+
+console.log(item3.getSiblings()) 

@@ -41,12 +41,123 @@ Node.prototype.getSiblings=function () {
 console.log(item3.getSiblings()) 
 
 Node.prototype.addClass=function(classes) {
-  for (let key in classes) {
-    var value = classes[key]
-    var methodName = value ? "add" : "remove"
-    this.classList[methodName](key)
-  }
+  classes.forEach(value => {
+    this.classList.add(value)
+  });
 }
 
-item3.addClass({a:true})
+item3.addClass(['a'])
+//这种函数的写法有点不好，对原型添加函数，也会造成函数名之间相互覆盖的问题
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

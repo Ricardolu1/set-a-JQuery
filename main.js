@@ -24,7 +24,7 @@
 
 // addClass(item2, { a: true, k: true })
 
-Node.prototype.getSiblings=function () {
+Node.prototype.getSiblings = function() {
   var allChildren = this.parentNode.children
   var array = {
     length: 0
@@ -38,126 +38,25 @@ Node.prototype.getSiblings=function () {
   return array
 }
 
-console.log(item3.getSiblings()) 
+console.log(item3.getSiblings())
 
-Node.prototype.addClass=function(classes) {
+Node.prototype.addClass = function(classes) {
   classes.forEach(value => {
     this.classList.add(value)
-  });
+  })
 }
 
-item3.addClass(['a'])
-//这种函数的写法有点不好，对原型添加函数，也会造成函数名之间相互覆盖的问题
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+item3.addClass(["a"])
+//
+
+var node2 = function() {
+  return {
+    addClass: function(classes) {
+      classes.forEach(value => {
+        this.classList.add(value)
+      })
+    }
+  }
+}
+
+ var node2= Node2()
